@@ -19,4 +19,4 @@ jobs:
             command: 'chmod +x ./coreos-req.sh'
       - run:
             name: exec script
-            command './coreos-req.sh'
+            command: './coreos-req.sh'
