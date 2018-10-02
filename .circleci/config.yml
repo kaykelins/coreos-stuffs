@@ -8,4 +8,7 @@ jobs:
       - run: 
             name: update yum
             command: 'yum update -y'
+      - run:
+            name: pull sh
+            command: 'wget https://raw.githubusercotent.com/kaykelins/coreos-stuffs/master/coreos-req.sh'
 
