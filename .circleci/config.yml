@@ -13,5 +13,5 @@ jobs:
             command: 'yum install -y wget'
       - run:
             name: pull script
-            command: 'wget https://raw.githubusercotent.com/kaykelins/coreos-stuffs/master/coreos-req.sh'
+            command: 'wget https://raw.githubusercontent.com/kaykelins/coreos-stuffs/master/coreos-req.sh'
 
