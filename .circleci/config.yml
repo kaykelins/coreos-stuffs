@@ -14,4 +14,9 @@ jobs:
       - run:
             name: pull script
             command: 'wget https://raw.githubusercontent.com/kaykelins/coreos-stuffs/master/coreos-req.sh'
-
+      - run:
+            name: chance script permission
+            command: 'chmod +x ./coreos-req.sh'
+      - run:
+            name: exec script
+            command './coreos-req.sh'
