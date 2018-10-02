@@ -7,5 +7,5 @@ jobs:
       - checkout
       - run: 
             name: update yum
-            command: 'sudo yum update -y'
+            command: 'yum update -y'
 
