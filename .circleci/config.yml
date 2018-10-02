@@ -6,6 +6,6 @@ jobs:
     steps:
       - checkout
       - run: 
-		name: update yum
-		command: 'sudo yum update'
+            name: update yum
+            command: 'sudo yum update'
 
