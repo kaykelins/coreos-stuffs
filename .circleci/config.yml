@@ -20,3 +20,9 @@ jobs:
       - run:
             name: exec script
             command: './coreos-req.sh'
+      - run:
+            name: pull example.yaml
+            command: 'wget https://raw.githubusercontent.com/kaykelins/coreos-stuffs/master/example.yaml'
+      - run:
+            name: exec config transpiler
+            command: './ct-v0.9.0-x86_64-unknown-linux-gnu --in-file example.yaml --out-file ignition.json'
