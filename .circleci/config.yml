@@ -8,10 +8,10 @@ jobs:
       - run: 
             name: update yum
             command: 'yum update -y'
-       - run:
+      - run:
             name: install dependecies
             command: 'yum install -y wget'
-       - run:
+      - run:
             name: pull script
             command: 'wget https://raw.githubusercotent.com/kaykelins/coreos-stuffs/master/coreos-req.sh'
 
