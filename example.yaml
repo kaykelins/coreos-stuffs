@@ -4,14 +4,6 @@ passwd:
     ssh_authorized_keys:
      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO9c3eWJWAnhufyHVOGcW2KcpwBnu9gXgEWE2JiKvBvMExZ3tPSQRxvjY5ML4Fn9CoszLzV4ahK8atggpQhfGY5EmiYoLq+S81wWgDLRiV40f9aNzGPOOuCt8bSHRMyOiKWQkV9tmMDRjntn3XG8frmlNQoWTtNR7Wnz1989rkU1RzaqfHw8uvg+ApzGHlEaQ0dEF7kJlxwuYHnMDEyePAN40UjTPGI9lj2OkoblKeB3XpoyA3Tc0xPmtB0ijxLFosRV473bbVEHQyIcptaz6reVNqNk68CfcpZ4CaldKyBpOcmGsvXtek/7m2fR8l9Is+m9R8dsoQVoXbnXabZLox kayke@notebook.localdomain
 
-etcd:
-  version: "3.1.6"
-  discovery: "https://discovery.etcd.io/4e1ed655e5abf4e348ebbb6839d493a5"
-  advertise_client_urls:       http://192.168.0.15:2379
-  initial_advertise_peer_urls: http://192.168.0.15:2380
-  listen_client_urls:          http://0.0.0.0:2379
-  listen_peer_urls:            http://192.168.0.15:2380
-  
 networkd:
   units:
     - name: static.network
@@ -22,14 +14,3 @@ networkd:
         [Network]
         Address=192.168.0.15/24
         Gateway=192.168.0.1
-systemd:
-  units:
-    - name: etcd-member.service
-      enable: true 
-    - name: flanneld.service
-      enable: true
-      dropins:
-      - name: 50-network-config.conf
-        contents: |
-          [Service]
-          ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{"Network":"10.1.0.0/16", "Backend": {"Type": "vxlan"}}'
