@@ -4,7 +4,7 @@ passwd:
     ssh_authorized_keys:
      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO9c3eWJWAnhufyHVOGcW2KcpwBnu9gXgEWE2JiKvBvMExZ3tPSQRxvjY5ML4Fn9CoszLzV4ahK8atggpQhfGY5EmiYoLq+S81wWgDLRiV40f9aNzGPOOuCt8bSHRMyOiKWQkV9tmMDRjntn3XG8frmlNQoWTtNR7Wnz1989rkU1RzaqfHw8uvg+ApzGHlEaQ0dEF7kJlxwuYHnMDEyePAN40UjTPGI9lj2OkoblKeB3XpoyA3Tc0xPmtB0ijxLFosRV473bbVEHQyIcptaz6reVNqNk68CfcpZ4CaldKyBpOcmGsvXtek/7m2fR8l9Is+m9R8dsoQVoXbnXabZLox kayke@notebook.localdomain
 
-systemd
+systemd:
   units:
     - name: etcd2.service
       command: start
