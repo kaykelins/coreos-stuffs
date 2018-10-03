@@ -7,9 +7,10 @@ passwd:
 systemd:
   units:
     - name: etcd2.service
-      command: start
+      enabled: true
+
     - name: fleet.service
-      command: start
+      enabled: true
 
 networkd:
   units:
