@@ -9,11 +9,11 @@ curl -L "https://github.com/kubernetes-incubator/cri-tools/releases/download/${C
 
 RELEASE="$(curl -sSL https://dl.k8s.io/release/stable.txt)"
 
-mkdir -p /opt/bin
+sudo mkdir -p /opt/bin
 cd /opt/bin
 sudo curl -L --remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl}
 sudo chmod +x {kubeadm,kubelet,kubectl}
 
-sudo curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service" | sudo sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service
+sudo curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service" | sudo sed "s:/usr/bin:/opt/bin:g" > sudo /etc/systemd/system/kubelet.service
 sudo mkdir -p /etc/systemd/system/kubelet.service.d
-sudo curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf" | sudo sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+sudo curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf" | sudo sed "s:/usr/bin:/opt/bin:g" > sudo /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
