@@ -14,3 +14,8 @@ networkd:
         [Network]
         Address=192.168.0.15/24
         Gateway=192.168.0.1
+systemd:
+  units:
+    - name: docker.service
+      command: start
+      enable: true
