@@ -17,5 +17,4 @@ networkd:
 systemd:
   units:
     - name: docker.service
-      command: start
       enable: true
