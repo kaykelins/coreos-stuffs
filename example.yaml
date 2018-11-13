@@ -12,6 +12,7 @@ networkd:
         Name=en*
 
         [Network]
+        DNS=200.129.128.2
         Address=200.129.128.129
         Gateway=200.129.128.1
 systemd:
