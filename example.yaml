@@ -2,7 +2,7 @@ passwd:
  users:
   - name: core
     ssh_authorized_keys:
-     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO9c3eWJWAnhufyHVOGcW2KcpwBnu9gXgEWE2JiKvBvMExZ3tPSQRxvjY5ML4Fn9CoszLzV4ahK8atggpQhfGY5EmiYoLq+S81wWgDLRiV40f9aNzGPOOuCt8bSHRMyOiKWQkV9tmMDRjntn3XG8frmlNQoWTtNR7Wnz1989rkU1RzaqfHw8uvg+ApzGHlEaQ0dEF7kJlxwuYHnMDEyePAN40UjTPGI9lj2OkoblKeB3XpoyA3Tc0xPmtB0ijxLFosRV473bbVEHQyIcptaz6reVNqNk68CfcpZ4CaldKyBpOcmGsvXtek/7m2fR8l9Is+m9R8dsoQVoXbnXabZLox kayke@notebook.localdomain
+     - AAAAB3NzaC1yc2EAAAADAQABAAABAQCq2x2G3w1xrz/5l/XNQkJv3JMtXH24O9P2tc9MV7D8nQpieVNgAP3gnaKs9Qq1LZSPJgA0TywtmW9GTdFpB7nILPt5mBicwC9pDlbRDF7ZUg7LLQFpmjLpu1hIZhSxomtL/48Z6rWhfTeUsBXBWv/t3npm13YlNy4a9ekAzleWUClACwcesIltOJKSs8pyVv163C88ngT/WRVvzC7B5qEia+IUR9wSlnClT7bIr0TB84IbYspk2YbQGacTxoCwaY5PKUmFZTu7EBaVTFC9m9pSnq8l+wocXCqYQWcAztyiGx9f495RvA12bp0vheTH1GbX6O0rlziaUioTls0f+B6v marcos@marcos-VirtualBox
 
 networkd:
   units:
@@ -12,8 +12,8 @@ networkd:
         Name=en*
 
         [Network]
-        Address=192.168.0.15/24
-        Gateway=192.168.0.1
+        Address=200.129.128.129
+        Gateway=200.129.128.1
 systemd:
   units:
     - name: docker.service
